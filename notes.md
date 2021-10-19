@@ -29,3 +29,15 @@ SeasonsApp Challenges
   Need to change text and styling based on Location + Month
 
 
+
+# SeasonsApp
+
+AppComponent
+  Determines Location and Month 
+  Passes information to SeasonDisplay
+
+SeasonDisplay Component
+  Shows different text/icons based on props
+
+# Geolocation API
+Allows the user to provide their location to web apps if they so desire.
