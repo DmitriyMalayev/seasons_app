@@ -41,3 +41,20 @@ SeasonDisplay Component
 
 # Geolocation API
 Allows the user to provide their location to web apps if they so desire.
+
+Timeline
+  JavaScript file is loaded by the browser
+  AppComponent gets created
+  AppComponet gets invoked
+  Geolocation Service gets called and takes time to process
+  App returns JSX, gets rendered to page as HTML
+  ...
+  We get result of Geolocation
+  Tell the component to rerender itself with this new information
+
+# Rules of Class Based Components
+Must be a JavaScript class
+Must extend (subclass) React.Component
+Must define a "render" method that returns some amount of JSX
+
+
