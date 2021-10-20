@@ -4,16 +4,18 @@ import ReactDOM from "react-dom";
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {lat: null}; 
+    this.state = { lat: null };   //Only time for direct assignment
+    window.navigator.geolocation.getCurrentPosition(
+      (position) =>
+        this.setState({
+          lat: position.coords.latitude,
+        }),
+      (error) => console.log(error)
+    );
   }
 
   render() {
-    window.navigator.geolocation.getCurrentPosition(
-      (success) => console.log(success),
-      (error) => console.log(error)
-    );
-
-    return <div>Latitude:</div>;
+    return <div>Latitude: {this.state.lat} </div>;
   }
 }
 
