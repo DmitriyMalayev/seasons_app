@@ -1,5 +1,4 @@
 # How React Used To Be
-
 Function Components
   Can produce JSX to show content to the user
 Class Components
@@ -9,7 +8,6 @@ Class Components
 
 
 # Present
-
 Function Components (Hooks System)
   Can produce JSX to show content to the user
   Can use Hooks to run code at specific points in time
@@ -31,7 +29,6 @@ SeasonsApp Challenges
 
 
 # SeasonsApp
-
 AppComponent
   Determines Location and Month 
   Passes information to SeasonDisplay
@@ -57,4 +54,22 @@ Must be a JavaScript class
 Must extend (subclass) React.Component
 Must define a "render" method that returns some amount of JSX
 
+# Rules of State
+Only usable with Class Based Components or with Function based components with Hooks
+You will confuse props with state
+"State" is a JavaScript object that contains data that's relevant to a single component
+Updating "State" on a component causes the component to almost instantly rerender
+State must be initialized when a component is created
+State can ONLY be updated using the function setState()
 
+
+
+
+constructor(props) 
+  This is a JS function that is called before anything else whenever an instance of this class is created. It's a great place to initialize state.
+super(props)
+  Because React.Component has a constructor of it's own and we still want to use it's built in functionality we have to use super and pass in props.
+  super is a reference to the parent constructor function.
+
+this.state = {lat: null}; 
+  Whenever we don't know the default value, but know it's a number we put null instead
