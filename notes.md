@@ -70,6 +70,33 @@ constructor(props)
 super(props)
   Because React.Component has a constructor of it's own and we still want to use it's built in functionality we have to use super and pass in props.
   super is a reference to the parent constructor function.
+  If we call the constructor function we have to call super as well.
 
 this.state = {lat: null}; 
   Whenever we don't know the default value, but know it's a number we put null instead
+
+
+New Timeline
+  JavaScript file is loaded by the browser
+  Instance of App Component is created
+  App components "constructor" function gets called
+  State object is created and assigned to the "this.state" property
+  We call Geolocation Service
+  React calls the components render method
+
+
+  AppComponet gets invoked
+  Geolocation Service gets called and takes time to process
+  App returns JSX, gets rendered to page as HTML
+  ...
+  We get result of Geolocation
+  We update our state object with a call to this.setState() 
+  React sees that we updated the state of a component
+  React calls our "render" method a second time.
+  The render method returns some updated JSX
+  React takes that JSX and updates the content on the screen
+
+  The AppComponent has been rendered two times
+    first bootup
+    after update of state
+  

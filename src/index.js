@@ -5,9 +5,10 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = { lat: null };   //Only time for direct assignment
-    window.navigator.geolocation.getCurrentPosition(
+    
+    window.navigator.geolocation.getCurrentPosition(   
       (position) =>
-        this.setState({
+        this.setState({   //This runs only after a value has been received in the future.
           lat: position.coords.latitude,
         }),
       (error) => console.log(error)
