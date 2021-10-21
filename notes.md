@@ -134,3 +134,19 @@ New Timeline
   Called when we no longer want to show the component
   Good place to do cleanup especially for non react stuff. 
 
+```js
+// EQUIVALENT BECAUSE OF BABEL
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { lat: null, errorMessage: "" };
+    //Only time for direct assignment
+  }
+
+
+class App extends React.Component {
+  state = { lat: null, errorMessage: "" };
+
+
+```
