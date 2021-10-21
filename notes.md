@@ -111,11 +111,26 @@ New Timeline
               sit and wait until this component is no longer shown
                 componentWillUnmount
 
+`constructor`
+   Called before anything else whenever an instance of this class is created
+   It's a great place to initialize state and to do one time set up
+
+`render`
+  Must be called if constructor has been called 
+  Avoid doing anything besides returning JSX
 
 `componentDidMount`
   Called once right after render
+  Good place to do data loading
+  Only called one time.
+
 `componentDidUpdate`
   Called automatically anytime the component updates itself
   Before this is called render is called automatically as well
-`componentDidUpdate`
+  Good place to do more data loading when state / props change
+
+
+`componentWillUnmount`
   Called when we no longer want to show the component
+  Good place to do cleanup especially for non react stuff. 
+

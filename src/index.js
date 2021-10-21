@@ -6,23 +6,14 @@ class App extends React.Component {
     super(props);
     this.state = { lat: null, errorMessage: "" };
     //Only time for direct assignment
-
-    window.navigator.geolocation.getCurrentPosition(
-      (position) =>
-        this.setState({
-          //This runs only after a value has been received in the future.
-          lat: position.coords.latitude,
-        }),
-      (error) => this.setState({ errorMessage: error.message })
-      //Whenever we update state we don't have to update all values
-    );
   }
 
   componentDidMount() {
-  console.log("My comonent was just updated - it rerendered.");
-}
-
-
+    window.navigator.geolocation.getCurrentPosition(
+      (position) => this.setState({ lat: position.coords.latitude }),
+      (error) => this.setState({ errorMessage: error.message })
+    );
+  }
 
   render() {
     if (this.state.errorMessage && !this.state.lat) {
