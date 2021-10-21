@@ -18,6 +18,12 @@ class App extends React.Component {
     );
   }
 
+  componentDidMount() {
+  console.log("My comonent was just updated - it rerendered.");
+}
+
+
+
   render() {
     if (this.state.errorMessage && !this.state.lat) {
       return <div>Error: {this.state.errorMessage}</div>;

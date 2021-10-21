@@ -100,3 +100,22 @@ New Timeline
     first bootup
     after update of state
   
+  # Component Lifecycle Methods
+
+  constructor
+    render 
+      content visible on the screen
+        componentDidMount 
+          sit and wait for updates
+            componentDidUpdate 
+              sit and wait until this component is no longer shown
+                componentWillUnmount
+
+
+`componentDidMount`
+  Called once right after render
+`componentDidUpdate`
+  Called automatically anytime the component updates itself
+  Before this is called render is called automatically as well
+`componentDidUpdate`
+  Called when we no longer want to show the component
