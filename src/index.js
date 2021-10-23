@@ -13,7 +13,7 @@ class App extends React.Component {
     );
   }
 
-  render() {
+  renderContent() {  //helper function
     if (this.state.errorMessage && !this.state.lat) {
       return <div>Error: {this.state.errorMessage}</div>;
     }
@@ -22,9 +22,13 @@ class App extends React.Component {
     }
     return (
       <div>
-        <Loader />
+        <Loader message="Please accept our location request." />
       </div>
     );
+  }
+
+  render() {
+    return <div className="border red">{this.renderContent()}</div>;
   }
 }
 
