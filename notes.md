@@ -141,3 +141,24 @@ class App extends React.Component {
 
 
 ```
+
+
+`display: flex`
+A flex container expands items to fill available free space or shrinks them to prevent overflow. Most importantly, the flexbox layout is direction-agnostic as opposed to the regular layouts (block which is vertically-based and inline which is horizontally-based)
+
+`vh & vw`
+vh stands for viewport height and vw is for viewport width. Hence, setting an element to a width value of 50vw means that the element will have a width that's 50% of the viewport size, and this stays true when the viewport is resized.
+
+
+
+`Finding an element that has a class name of season-display and the className of winter and we select the icon`
+
+```css
+.season-display.winter i{
+  color: blue;
+}
+
+.season-display.summer i{
+  color: red;
+}
+```

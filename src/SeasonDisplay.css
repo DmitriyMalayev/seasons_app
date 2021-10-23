@@ -1,0 +1,38 @@
+.icon-left{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+
+}
+
+.icon-right{
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+/*Finding an element that has a class name of season-display and the className of winter and we select the icon */
+
+.season-display.winter i{
+  color: blue;
+}
+
+.season-display.summer i{
+  color: red;
+}
+
+.season-display{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.winter{
+  background-color: lightsteelblue;
+}
+
+.summer{
+  background-color: orange 
+}
+
