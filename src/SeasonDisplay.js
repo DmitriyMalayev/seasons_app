@@ -24,9 +24,9 @@ const SeasonDisplay = (props) => {
   const { text, iconName } = seasonConfig[season]; //contains text, iconName. Destructuring.
   return (
     <div>
-      <i className={`${iconName} icon`} />
+      <i className={`massive ${iconName} icon`} />
       <strong>{text}</strong>
-      <i className={`${iconName} icon`} />
+      <i className={`massive ${iconName} icon`} />
     </div>
   );
 };
