@@ -162,3 +162,15 @@ vh stands for viewport height and vw is for viewport width. Hence, setting an el
   color: red;
 }
 ```
+
+`Benefits of Class Components`
+  Easier code organization
+  Can use "state" which is another React system
+    Easier to handle user input
+  Understands lifecycle events
+  Easier to do things when the app first starts
+
+`Rules of Class Based Components`
+  Must be a JavaScript Class
+  Must extend (subclass) React.Component
+  Must define a "render" method that returns some JSX
